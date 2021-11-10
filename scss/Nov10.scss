@@ -79,3 +79,14 @@ input[type="checkbox"] {
         stroke-dashoffset: 0;
     }
 }
+
+@media (max-width: 540px) {
+    h2,
+    p {
+        font-size: 2rem;
+    }
+
+    label {
+        transform: scale(0.8);
+    }
+}
