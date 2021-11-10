@@ -1,0 +1,81 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: teal;
+}
+
+h2,
+p {
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-family: "Lato", sans-serif;
+    color: rgba(34, 255, 218, 50%);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+label {
+    padding: 10px;
+    background: linear-gradient(to top, #1111, #6666);
+    outline: rgb(34, 255, 218) solid 3px;
+
+    .circle {
+        stroke-dasharray: 1194;
+        stroke-dashoffset: 1194;
+    }
+
+    .tick {
+        stroke-dasharray: 350;
+        stroke-dashoffset: 350;
+    }
+}
+
+input[type="checkbox"] {
+    display: none;
+
+    &:checked {
+        + label {
+            svg {
+                .circle {
+                    animation: circle 1s ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+
+                .tick {
+                    animation: tick 0.8s ease-in-out;
+                    animation-fill-mode: forwards;
+                    animation-delay: 1s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes circle {
+    from {
+        stroke-dashoffset: 1194;
+    }
+
+    to {
+        stroke-dashoffset: 2388;
+    }
+}
+
+@keyframes tick {
+    from {
+        stroke-dashoffset: 350;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}

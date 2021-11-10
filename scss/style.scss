@@ -1,0 +1,32 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #f75, #331);
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+    }
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: "Irish Grover", cursive;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    background-image: linear-gradient(30deg, #3339, #fffa, #3339, #fffa, #3339, #fffa, #333);
+}
