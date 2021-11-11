@@ -1,0 +1,119 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+:root {
+  --header-height: 44px;
+}
+
+.header {
+  padding: 0 18px;
+  height: var(--header-height);
+  background-color: #000;
+}
+
+.header .toggler {
+  display: none;
+}
+
+.header .toggler:checked + .toggler-label .hamburger-container span {
+  background-color: #ffc629;
+}
+
+.header .toggler:checked + .toggler-label .hamburger-container span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 4px;
+  -webkit-transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+}
+
+.header .toggler:checked + .toggler-label .hamburger-container span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: -4px;
+  -webkit-transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+}
+
+.header .toggler:checked ~ .nav-items {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  opacity: 100%;
+}
+
+.header .toggler-label .hamburger-container {
+  position: relative;
+  top: 16px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.header .toggler-label .hamburger-container span {
+  position: relative;
+  top: 0;
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: top 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out;
+}
+
+.header .toggler-label .hamburger-container span:nth-child(2) {
+  margin-top: 7px;
+}
+
+.header .nav-items {
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background-color: black;
+  opacity: 0%;
+  -webkit-transition: opacity 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+  transition: opacity 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+  transition: transform 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out 0.3s;
+  transition: transform 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out 0.3s, -webkit-transform 0.3s ease-in-out 0.3s;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+
+.header .nav-items ul {
+  margin-top: 1rem;
+}
+
+.header .nav-items ul li a {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.header .nav-items ul li a i {
+  padding-right: 1rem;
+}
+
+.header .nav-items ul li a:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  color: #ffc629;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+/*# sourceMappingURL=Nov11.css.map */

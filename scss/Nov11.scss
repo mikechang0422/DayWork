@@ -1,0 +1,112 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+
+$header-height: 44px;
+
+:root {
+    --header-height: 44px;
+}
+
+.header {
+    padding: 0 18px;
+    height: var(--header-height);
+    background-color: #000;
+
+    .toggler {
+        display: none;
+
+        &:checked {
+            + .toggler-label {
+                .hamburger-container {
+                    span {
+                        background-color: rgb(255, 198, 41);
+
+                        &:nth-child(1) {
+                            transform: rotate(45deg);
+                            top: 4px;
+                            transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s;
+                        }
+
+                        &:nth-child(2) {
+                            transform: rotate(-45deg);
+                            top: -4px;
+                            transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s;
+                        }
+                    }
+                }
+            }
+
+            ~ .nav-items {
+                transform: scaleY(1);
+                opacity: 100%;
+            }
+        }
+    }
+
+    .toggler-label {
+        .hamburger-container {
+            position: relative;
+            top: 16px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+            span {
+                position: relative;
+                top: 0;
+                display: block;
+                height: 2px;
+                background-color: #fff;
+                transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s, background-color 0.3s ease-in-out 0.3s;
+
+                &:nth-child(2) {
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+
+    .nav-items {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        background-color: rgba(0, 0, 0, 80%);
+        opacity: 0%;
+        transition: transform 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out 0.3s;
+        transform: scaleY(0);
+        transform-origin: 50% 0;
+
+        ul {
+            margin-top: 1rem;
+
+            li {
+                a {
+                    display: block;
+                    width: 100%;
+                    font-size: 2rem;
+                    text-decoration: none;
+                    color: #fff;
+                    transition: all 0.3s ease-in-out;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    line-height: 1.5;
+
+                    i {
+                        padding-right: 1rem;
+                    }
+
+                    &:hover {
+                        transform: translateY(-5px);
+                        color: rgb(255, 198, 41);
+                        font-weight: 700;
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
