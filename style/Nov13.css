@@ -1,0 +1,60 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  position: relative;
+  font-size: 4rem;
+  line-height: 1.5;
+  letter-spacing: -0.03rem;
+  font-weight: 700;
+}
+
+h1 svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+h1 svg #tick {
+  stroke-dasharray: 210px;
+  stroke-dashoffset: 210px;
+  -webkit-animation: 3s tick ease-in-out infinite;
+          animation: 3s tick ease-in-out infinite;
+}
+
+@-webkit-keyframes tick {
+  0%,
+  50% {
+    stroke-dashoffset: 210px;
+  }
+  50%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes tick {
+  0%,
+  50% {
+    stroke-dashoffset: 210px;
+  }
+  50%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+/*# sourceMappingURL=Nov13.css.map */
