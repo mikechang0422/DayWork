@@ -50,7 +50,7 @@ p {
   max-width: 1166;
 }
 
-header {
+.header {
   position: absolute;
   top: 0;
   left: 0;
@@ -68,21 +68,51 @@ header {
   width: 100%;
 }
 
-header ul {
+.header ul {
   padding-left: 0;
   width: 100%;
 }
 
-header ul li {
+.header ul li {
+  position: relative;
   display: inline-block;
   margin: 0 20px;
   list-style: none;
 }
 
-header ul li a {
+.header ul li a {
+  font-size: 1.2em;
   text-decoration: none;
   color: #fff;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
   text-transform: uppercase;
+}
+
+.header ul li:hover a {
+  color: goldenrod;
+}
+
+.header ul li:hover::before {
+  width: 100%;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.header ul li::before {
+  position: absolute;
+  bottom: -10px;
+  width: 0%;
+  height: 2px;
+  background-color: goldenrod;
+  content: "";
+}
+
+.header .logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .banner {
@@ -105,13 +135,21 @@ header ul li a {
 
 .banner h1 {
   margin-bottom: 0.5rem;
-  text-transform: capitalize;
   color: #fffd;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .banner p {
   color: #fffd;
   text-transform: capitalize;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .btn {
@@ -157,7 +195,7 @@ header ul li a {
 }
 
 .brand-logo {
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 
 .brand-logo .brand-logo-inner {
@@ -172,11 +210,15 @@ header ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .sec1 {
   position: relative;
-  padding: 80px 0;
+  padding: 4rem 0;
 }
 
 .sec1 h3 {
@@ -284,5 +326,205 @@ header ul li a {
 .sec2:nth-child(even) .sec2-inner .text .text-inner::before {
   right: -30px;
   left: inherit;
+}
+
+.sec3 {
+  padding: 7rem 0 0;
+}
+
+.sec3 .container .sec3-inner {
+  margin-top: 5rem;
+}
+
+.sec3 .container .sec3-inner h2 {
+  padding: 0 0 2rem 2rem;
+  min-width: 60%;
+  text-transform: capitalize;
+}
+
+.sec3 .container .sec3-inner .slick-arrow {
+  position: absolute;
+  top: -10rem;
+}
+
+.sec3 .container .sec3-inner .slick-prev::before,
+.sec3 .container .sec3-inner .slick-next::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background: #fff url(../images/Nov14/arrow-next.svg) no-repeat;
+  background-position: center;
+  background-size: 1rem;
+  border: 1px solid #fff;
+  content: "";
+  line-height: 70px;
+  opacity: 100%;
+}
+
+.sec3 .container .sec3-inner .slick-prev {
+  right: 180px;
+  left: inherit;
+}
+
+.sec3 .container .sec3-inner .slick-prev::before {
+  background: transparent url(../images/Nov14/arrow-prev.svg) no-repeat;
+  background-position: center;
+  background-size: 1rem;
+}
+
+.sec3 .container .sec3-inner .slick-next {
+  right: 90px;
+}
+
+.sec4 {
+  padding: 6rem 2rem;
+}
+
+.sec4 h2 {
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+
+.sec4 .sec4-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.sec4 .sec4-boxes .box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  width: 23%;
+  min-height: 300px;
+  outline: 1px solid #fff;
+}
+
+.sec4 .sec4-boxes .box h6 {
+  z-index: 2;
+  font-size: 2rem;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: capitalize;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+
+.sec4 .sec4-boxes .box .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0%;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+}
+
+.sec4 .sec4-boxes .box .img img {
+  width: 100%;
+}
+
+.sec4 .sec4-boxes .box:hover .img {
+  opacity: 100%;
+}
+
+.footer {
+  position: relative;
+  padding: 3rem 2rem;
+}
+
+.footer .footer-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .footer-inner .col {
+  padding-right: 3rem;
+}
+
+.footer .footer-inner .col img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.footer ul {
+  margin-left: 0;
+}
+
+.footer ul li {
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+.footer ul li a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  text-transform: capitalize;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.footer ul li:hover a {
+  color: goldenrod;
+}
+
+.footer::before, .footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(#fff), to(transparent));
+  background: linear-gradient(to left, transparent, #fff, transparent);
+}
+
+.footer::before {
+  top: 0;
+}
+
+.footer::after {
+  bottom: 0;
+}
+
+.copyright {
+  padding: 1rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /*# sourceMappingURL=Nov14.css.map */
