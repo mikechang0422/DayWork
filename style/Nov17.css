@@ -1,0 +1,69 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background-color: #000;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+section:nth-child(even) {
+  color: #000;
+  background-color: #fff;
+}
+
+.scrollTop {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.scrollTop i {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.scrollTop:hover {
+  color: #000;
+  background-color: #7f7f7f;
+}
+/*# sourceMappingURL=Nov17.css.map */
