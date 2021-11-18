@@ -43,6 +43,7 @@ body {
                 left: var(--left);
                 width: max-content;
                 font-size: 4rem;
+                font-family: Butler, sans-serif;
                 color: hsl(var(--hue), 75%, 75%);
                 content: "Today Is Your Day ! Today Is Your Day !";
             }
@@ -66,6 +67,6 @@ body {
     .panel:nth-child(#{$i + 1}) {
         --left: #{$width * $i * (-1)};
         --hue: #{360 / 24 * $i};
-        --angle: #{360deg / 24 * $i};
+        --angle: #{360deg / 22 * $i};
     }
 }
