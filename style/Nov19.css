@@ -1,0 +1,233 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  background-color: #151515;
+}
+
+.container {
+  position: relative;
+}
+
+.container .card {
+  position: relative;
+  overflow: hidden;
+  width: 320px;
+  height: 450px;
+  background-color: #232323;
+  border-radius: 20px;
+}
+
+.container .card .img_box {
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  width: 100%;
+  height: 220px;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.container .card .img_box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 270px;
+  -webkit-transform: translate(-50%, -50%) rotate(25deg);
+          transform: translate(-50%, -50%) rotate(25deg);
+  -webkit-filter: hue-rotate(0deg);
+          filter: hue-rotate(0deg);
+}
+
+.container .card .contant_box {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.container .card .contant_box h2 {
+  position: relative;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.container .card .contant_box .size,
+.container .card .contant_box .color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 20px;
+  opacity: 0%;
+  visibility: hidden;
+}
+
+.container .card .contant_box .size h3,
+.container .card .contant_box .color h3 {
+  margin-right: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.container .card .contant_box .size span,
+.container .card .contant_box .color span {
+  display: inline-block;
+  margin: 0 5px;
+  width: 26px;
+  height: 26px;
+  font-size: 1rem;
+  text-align: center;
+  color: #111;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.container .card .contant_box .size span:hover,
+.container .card .contant_box .color span:hover {
+  background-color: #9bdc28;
+}
+
+.container .card .contant_box .color span {
+  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #9bdc28;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container .card .contant_box .color span:nth-child(3) {
+  -webkit-filter: hue-rotate(60deg);
+          filter: hue-rotate(60deg);
+}
+
+.container .card .contant_box .color span:nth-child(4) {
+  -webkit-filter: hue-rotate(120deg);
+          filter: hue-rotate(120deg);
+}
+
+.container .card .contant_box .color span:nth-child(5) {
+  -webkit-filter: hue-rotate(180deg);
+          filter: hue-rotate(180deg);
+}
+
+.container .card .contant_box .color span:nth-child(6) {
+  -webkit-filter: hue-rotate(240deg);
+          filter: hue-rotate(240deg);
+}
+
+.container .card .contant_box a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #111;
+  background-color: #fff;
+  border-radius: 4px;
+  opacity: 0%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-transform: capitalize;
+  font-weight: 700;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.container .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9bdc28;
+  -webkit-clip-path: circle(150px at 80% 20%);
+          clip-path: circle(150px at 80% 20%);
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.container .card::after {
+  content: "Nike";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12rem;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+  text-transform: capitalize;
+}
+
+.container .card:hover .img_box {
+  top: 0;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.container .card:hover .contant_box {
+  height: 210px;
+}
+
+.container .card:hover .contant_box .size {
+  opacity: 100%;
+  visibility: visible;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.container .card:hover .contant_box .color {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.container .card:hover::before {
+  -webkit-clip-path: circle(300px at 80% -20%);
+          clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:hover a {
+  opacity: 100%;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+/*# sourceMappingURL=Nov19.css.map */
