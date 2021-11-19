@@ -39,6 +39,7 @@ body {
                 width: 270px;
                 transform: translate(-50%, -50%) rotate(25deg);
                 filter: hue-rotate(0deg);
+                transition: all ease-in-out 0.75s;
             }
         }
 
@@ -77,6 +78,7 @@ body {
                     font-weight: 700;
                     text-transform: uppercase;
                     letter-spacing: 2px;
+                    line-height: 1.5;
                 }
 
                 span {
@@ -169,11 +171,15 @@ body {
         &:hover {
             .img_box {
                 top: 0;
-                transform: translateY(0%);
+                transform: translateY(10%);
+
+                img {
+                    transform: translate(-50%, -50%)  rotate(0deg);
+                }
             }
 
             .contant_box {
-                height: 210px;
+                height: 230px;
 
                 .size {
                     opacity: 100%;

@@ -51,6 +51,8 @@ body {
           transform: translate(-50%, -50%) rotate(25deg);
   -webkit-filter: hue-rotate(0deg);
           filter: hue-rotate(0deg);
+  -webkit-transition: all ease-in-out 0.75s;
+  transition: all ease-in-out 0.75s;
 }
 
 .container .card .contant_box {
@@ -98,6 +100,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
+  line-height: 1.5;
 }
 
 .container .card .contant_box .size span,
@@ -196,12 +199,17 @@ body {
 
 .container .card:hover .img_box {
   top: 0;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+.container .card:hover .img_box img {
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
 }
 
 .container .card:hover .contant_box {
-  height: 210px;
+  height: 230px;
 }
 
 .container .card:hover .contant_box .size {
