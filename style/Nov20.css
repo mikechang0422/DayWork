@@ -113,4 +113,27 @@ body {
   -webkit-transform: rotate(315deg);
           transform: rotate(315deg);
 }
+
+@media (max-width: 540px) {
+  .menu {
+    width: 300px;
+    height: 300px;
+  }
+  .menu li {
+    -webkit-transform-origin: 150px;
+            transform-origin: 150px;
+    -webkit-transform: rotate(0deg) translateX(100px);
+            transform: rotate(0deg) translateX(100px);
+  }
+  .menu li a {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+  .toggle {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
 /*# sourceMappingURL=Nov20.css.map */
