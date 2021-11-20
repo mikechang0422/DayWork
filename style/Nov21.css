@@ -1,0 +1,130 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  background: #091921;
+}
+
+.clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 350px;
+  height: 350px;
+  background-size: cover;
+  border: 4px solid #091921;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(255, 255, 255, 0.3), inset 0 15px 15px rgba(255, 255, 255, 0.3);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(255, 255, 255, 0.3), inset 0 15px 15px rgba(255, 255, 255, 0.3);
+  background-image: url(../images/Nov21/clock.png);
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+
+.clock .hour,
+.clock .hr {
+  width: 160px;
+  height: 160px;
+}
+
+.clock .min,
+.clock .mn {
+  width: 190px;
+  height: 190px;
+}
+
+.clock .sec,
+.clock .sc {
+  width: 230px;
+  height: 230px;
+}
+
+.clock .hr,
+.clock .mn,
+.clock .sc {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+.clock .hr::before {
+  position: absolute;
+  z-index: 10;
+  width: 8px;
+  height: 80px;
+  background-color: #ff105e;
+  border-radius: 6px 6px 0 0;
+  content: "";
+}
+
+.clock .mn::before {
+  position: absolute;
+  z-index: 20;
+  width: 4px;
+  height: 90px;
+  background-color: #fffaff;
+  border-radius: 6px 6px 0 0;
+  content: "";
+}
+
+.clock .sc::before {
+  position: absolute;
+  z-index: 30;
+  width: 2px;
+  height: 150px;
+  background-color: #fffaff;
+  border-radius: 6px 6px 0 0;
+  content: "";
+}
+
+.clock::before {
+  position: absolute;
+  z-index: 1000;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+}
+
+@media (max-width: 540px) {
+  .clock {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+/*# sourceMappingURL=Nov21.css.map */
