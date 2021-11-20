@@ -1,0 +1,85 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+$primary-color: #111;
+$secondary-color: #ffa;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Lato", sans-serif;
+    background: linear-gradient(45deg, #8460ed, #ff1252);
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+
+    li {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        list-style: none;
+        transition: all ease-in-out 1s;
+        transform-origin: 200px;
+        transition-delay: calc(0.1s * var(--i));
+        transform: rotate(0deg) translateX(200px);
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            font-size: 2rem;
+            color: $secondary-color;
+            background-color: $primary-color;
+            border-radius: 50%;
+            transform: rotate(calc(360deg / -8 * var(--i)));
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+            transition: all ease-in-out 0.5s;
+        }
+    }
+
+    .toggle {
+        position: absolute;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+        color: $secondary-color;
+        background-color: $primary-color;
+        border-radius: 50%;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: all ease-in-out 1s;
+    }
+
+    &.active {
+        li {
+            transform: rotate(calc(360deg / 8 * var(--i)));
+            opacity: 1;
+        }
+
+        .toggle {
+            transform: rotate(315deg);
+        }
+    }
+}

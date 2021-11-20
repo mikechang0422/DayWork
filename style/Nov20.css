@@ -1,0 +1,116 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(45deg, #8460ed, #ff1252);
+}
+
+.menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 400px;
+}
+
+.menu li {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  list-style: none;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+  -webkit-transform-origin: 200px;
+          transform-origin: 200px;
+  -webkit-transition-delay: calc(0.1s * var(--i));
+          transition-delay: calc(0.1s * var(--i));
+  -webkit-transform: rotate(0deg) translateX(200px);
+          transform: rotate(0deg) translateX(200px);
+}
+
+.menu li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  color: #ffa;
+  background-color: #111;
+  border-radius: 50%;
+  -webkit-transform: rotate(calc(360deg / -8 * var(--i)));
+          transform: rotate(calc(360deg / -8 * var(--i)));
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.menu .toggle {
+  position: absolute;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  font-size: 3rem;
+  color: #ffa;
+  background-color: #111;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+}
+
+.menu.active li {
+  -webkit-transform: rotate(calc(360deg / 8 * var(--i)));
+          transform: rotate(calc(360deg / 8 * var(--i)));
+  opacity: 1;
+}
+
+.menu.active .toggle {
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+/*# sourceMappingURL=Nov20.css.map */
