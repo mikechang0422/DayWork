@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
 @import url("../font/Butler_Webfont/stylesheet.css");
 
+$bgi: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+
 *,
 *::before,
 *::after {
@@ -17,7 +19,7 @@ body {
     background: #ddd;
     place-items: center;
     background-size: 400%;
-    background-image: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+    background-image: $bgi;
     animation: bgAnimation 20s infinite alternate;
 }
 
@@ -38,7 +40,7 @@ body {
         font-weight: 900;
         font-style: italic;
         line-height: 1.5;
-        background-image: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+        background-image: $bgi;
         animation: bgAnimation 10s infinite alternate;
     }
 
@@ -49,7 +51,7 @@ body {
         background-size: 300%;
         border: 0;
         transition: background-position 1s;
-        background-image: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+        background-image: $bgi;
         cursor: pointer;
 
         &:hover,
