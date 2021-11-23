@@ -1,0 +1,65 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    font-family: "Lato", sans-serif;
+    color: #333;
+    background: #ddd;
+    place-items: center;
+    background-size: 400%;
+    background-image: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+    animation: bgAnimation 20s infinite alternate;
+}
+
+.content {
+    padding: 3em;
+    width: 70vw;
+    background-color: #fffa;
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+
+    .title {
+        font-size: 5rem;
+        text-align: center;
+        color: transparent;
+        background-size: 400%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-style: italic;
+        line-height: 1.5;
+        background-image: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+        animation: bgAnimation 10s infinite alternate;
+    }
+
+    .fun {
+        padding: 0.5em 1.5em;
+        font-size: 2rem;
+        background-position: left;
+        background-size: 300%;
+        border: 0;
+        transition: background-position 1s;
+        background-image: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-position: right;
+        }
+    }
+}
+
+@keyframes bgAnimation {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
