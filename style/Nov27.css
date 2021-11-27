@@ -143,6 +143,7 @@ body {
   color: #fffaff;
   background-color: #e83c80;
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 .banner .content .btn:hover {
