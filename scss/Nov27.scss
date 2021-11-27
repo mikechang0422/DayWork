@@ -87,6 +87,9 @@ body {
         }
 
         &.bgdark {
+            top: 0;
+            left: 0;
+            margin-left: 40px;
             background-color: #0006;
         }
     }
