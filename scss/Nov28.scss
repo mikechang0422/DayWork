@@ -1,0 +1,81 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Lato, sans-serif;
+    color: #333;
+    background: linear-gradient(to top, #5d3800, #02b970);
+}
+
+.face {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: #ffcd00;
+    border-radius: 50%;
+
+    .eyes {
+        position: relative;
+        top: -40px;
+        display: flex;
+
+        .eye {
+            position: relative;
+            margin: 0 15px;
+            width: 80px;
+            height: 80px;
+            background-color: #fffaff;
+            border-radius: 50%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 25px;
+                width: 40px;
+                height: 40px;
+                background-color: #333;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 180px;
+        width: 150px;
+        height: 70px;
+        background-color: #b57700;
+        border-bottom-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+        transition: 0.3s linear;
+    }
+
+    &:hover {
+        &::before {
+            top: 200px;
+            width: 150px;
+            height: 20px;
+            background-color: #b57700;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+}
