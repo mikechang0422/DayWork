@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hent-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/Nov29.css">
+    <title>DayWork - Nov29- Custom Select Menu Dropdown</title>
+</head>
+<body>
+    <div class="dropdown">
+        <input type="text" class="textbox" placeholder="DropDown Menu" readonly>
+        <div class="options">
+            <div class="option" onclick="show('HTML')"><ion-icon name="logo-html5"></ion-icon>HTML</div>
+            <div class="option" onclick="show('CSS')"><ion-icon name="logo-css3"></ion-icon>CSS</div>
+            <div class="option" onclick="show('JS')"><ion-icon name="logo-nodejs"></ion-icon>JS</div>
+            <div class="option" onclick="show('VUE')"><ion-icon name="logo-vue"></ion-icon>VUE</div>
+            <div class="option" onclick="show('FIGMA')"><ion-icon name="logo-figma"></ion-icon>FIGMA</div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/Nov29.js"></script>
+</body>
+
+</html>
