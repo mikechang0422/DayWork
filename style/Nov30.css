@@ -1,0 +1,74 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: Lato, sans-serif;
+  color: #333;
+}
+
+section {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #111;
+  border-radius: 50%;
+}
+
+section p {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  color: transparent;
+  background: url("https://picsum.photos/id/1074/800/600");
+  background-position: center;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  letter-spacing: -0.05em;
+  line-height: 0.7em;
+  background-blend-mode: color-dodge;
+  background-attachment: fixed;
+}
+
+section p::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: url("https://picsum.photos/id/1074/800/600");
+  background-position: right;
+  background-size: 200%;
+  content: "";
+  opacity: 1;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+@media (max-width: 540px) {
+  section p {
+    background-size: cover;
+  }
+  section p::before {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Nov30.css.map */
